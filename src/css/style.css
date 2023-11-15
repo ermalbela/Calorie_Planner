@@ -35,6 +35,11 @@
   transition: 0.3s ease;
 }
 
+body{
+  margin: 0; 
+  background-color: #f5f7fb;
+}
+
 .bar-item{
   display: block;
   padding: 0px 20px;
@@ -45,8 +50,27 @@
   color: black;
   font-weight: 600;
 }
-.bar-item > li{
+
+.user-wrapper{
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+li{
   list-style-type: none;
+  margin-left: 16px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  color: var(--navbar-light-secondary);
+  direction: ltr;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.2s;
 }
 
 .bar-item-wrapper{
