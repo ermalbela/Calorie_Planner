@@ -1,272 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/css/login.css">
+</head>
 <body>
-<button class="btn">Login</button>
-
-<div class="idk">
-    <span class="icon-close"><ion-icon name="close-circle"></ion-icon>
-    </span>
-
+  <div class="container">
     <div class="form-box login">
-        <h2>Login</h2>
-        <form action="#">
-            <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox"> Remember Me</label>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <button type="submit" class="btn2">Login</button>
-                <div class="login-register">
-                    <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
-            </div>
-        </form>
+      <h2>Login</h2>
+      <div class="form">
+        <div class="input-box-wrapper">
+          <div class="input-box">
+            <span class="icon">
+              <img src="./src/images/username-input.png" alt="Username-input-img" style="width: 19.2px;">
+            </span>
+            <input type="text" required placeholder="Username...">
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <img src="./src/images/password-input.png" alt="Password" style="width: 19.2px;">
+            </span>
+            <input type="password" required placeholder="Password...">
+          </div>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox"> Remember Me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <a href="index.html"><button type="submit" class="btn2">Login</button></a>
+        <div class="login-register">
+          <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+        </div>
+      </div>
     </div>
 
     <div class="form-box register">
-        <h2>Registration</h2>
-        <form action="#">
-            <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="person"></ion-icon>
-                    </span>
-                    <input type="text" required>
-                    <label>Username</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="mail"></ion-icon>
-                    </span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">I agree to the terms & conditions</label>
-                </div>
-                <button type="submit" class="btn2">Register</button>
-                <div class="login-register">
-                    <p>Already have an account?<a href="#" class="login-link">Login</a></p>
-            </div>
-        </form>
+      <h2>Registration</h2>
+      <div class="form">
+        <div class="input-box-wrapper">
+          <div class="input-box">
+            <span class="icon">
+              <img src="./src/images/username-input.png" alt="Username-input-img" style="width: 19.2px;">
+            </span>
+            <input type="text" required placeholder="Username">
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <img src="./src/images/password-input.png" alt="Password" style="width: 19.2px;">
+            </span>
+            <input type="password" required placeholder="Password">
+          </div>
+        </div>
+        <div class="remember-forgot">
+          <label>
+            <input type="checkbox">I agree to the terms & conditions
+          </label>
+        </div>
+        <button type="submit" class="btn2">Register</button>
+        <div class="login-register">
+          <p>Already have an account?<a href="#" class="login-link">Login</a></p>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 
 
 
 <script src="./src/js/script.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-
-<style>
-
-
-    body{
-        background-color: #202938;
-    }
-    .btn{
-        width: 130px;
-        height: 50px;
-        background: transparent;
-        border: 2px solid white;
-        outline: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 1.1em;
-        color: white;
-        font-weight: 500;
-        margin-left: 500px;
-        margin-top: 100px;
-    }
-
-    .btn:hover{
-        background-color: white;
-        color: black;
-
-    }
-
-    .idk{
-        position: relative;
-        width: 400px;
-        height: 440px;
-        background: transparent;
-        border: 2px solid rgba(255, 255, 255, .5);
-        border-radius: 20px;
-        backdrop-filter: blur(20px);
-        box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        
-        transition: transform .5s ease, height .2s ease;
-    }
-
-    
-    .idk.active{
-        height: 520px;
-    }
-
-    .idk .form-box{
-        width: 100%;
-        padding: 40px;
-
-    }
-
-    .idk .form-box.login{
-        transition: transform .18s ease;
-        transform: translateX(0);
-    }
-
-    .idk.active .form-box.login{
-        transition: none;
-        transform: translateX(-400px);
-    }
-
-
-    .idk .form-box.register{
-        position: absolute;
-        transition: none;
-        transform: translateX(400px);
-        
-    }
-
-    .idk.active .form-box.register{
-        transition: transform .18s ease;
-        transform: translateX(0);
-    }
-
-    .idk .icon-close{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 45px;
-        height: 45px;
-        font-size: 2em;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom-left-radius: 20px;
-        cursor: pointer;
-        z-index: 1;
-    }
-
-    .form-box h2{
-        font-size: 2em;
-        color: black;
-        text-align: center;
-    }
-
-    .input-box{
-        position: relative;
-        width: 100%;
-        height: 50px;
-        border-bottom: 2px solid black;
-        margin: 30px 0;
-    }
-
-    .input-box label{
-        position: absolute;
-        top: 50%;
-        left: 5px;
-        transform: translateY(-50%);
-        font-size: 1em;
-        color: black;
-        font-weight: 500;
-        pointer-events: none;
-        transition: .5s;
-    }
-    .input-box input:focus~label,
-    .input-box input:valid~label {
-        top: -5px;
-
-    }
-
-    .input-box input{
-        width: 100%;
-        height: 100%;
-        background: transparent;
-        border: none;
-        outline: none;
-        font-size: 1em;
-        color: #162938;
-        font-weight: 600;
-        padding: 0 35px 0 5px;
-    }
-
-    .input-box .icon{
-        position: absolute;
-        right: 8px;
-        font-size: 1.2em;
-        color: black;
-        line-height: 57px;
-
-    }
-
-    .remember-forgot{
-        font-size: .9em;
-        color: #162938;
-        font-weight: 500;
-        margin: -15px 0 15px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .remember-forgot label input{
-        accent-color: #162938;
-        margin-right: 3px;
-    }
-
-    .remember-forgot a{
-        color: #162938;
-        text-decoration: none;
-    }
-
-    .remember-forgot a:hover{
-        text-decoration: underline;
-
-    }
-
-    .btn2{
-        width: 100%;
-        height: 45px;
-        background: #162938;
-        border: none;
-        outline: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 1em;
-        color: white;
-        font-weight: 500;
-    }
-
-    .login-register{
-        font-size: .9em;
-        color: #162938;
-        text-align: center;
-        font-weight: 500;
-        margin: 25px 0 10px;
-    }
-
-    .login-register p a{
-        color: #162938;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    .login-register p a:hover{
-        text-decoration: underline;
-    }
-</style>
+</html>
