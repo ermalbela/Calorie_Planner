@@ -42,7 +42,7 @@
   display: none;
 }
 
-#divi{
+.good-foods-img{
   border-radius: 5%;
   background-image: url('../images/gain-weight/brown-rice.jpg');
   background-repeat: no-repeat;
@@ -53,11 +53,10 @@
   overflow: hidden;
 }
 
-#divi:hover{
-  padding-top: 5%;
+.good-foods-img:hover{
   transition: ease-in-out 0.4s;
-  transform: scale(1.01);
-  box-shadow: inset 0 0 150px 20px #000000;
+  transform: scale(1.05);
+  box-shadow: inset 0 0 155px 43px #000000;
   > h3, h4{
     display: block!important;
     text-align: center;
