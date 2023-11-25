@@ -23,7 +23,6 @@ body > *{
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	
 	transition: transform .5s ease, height .2s ease;
 }
 
