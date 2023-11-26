@@ -82,3 +82,12 @@
 
 
 }
+
+@media only screen and (max-width: 1457px){
+  .good-foods-content{
+    width: 170px!important;
+  }
+  .good-foods-img{
+    width: 170px!important;
+  }
+}
