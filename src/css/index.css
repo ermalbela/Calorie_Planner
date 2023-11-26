@@ -156,6 +156,7 @@
   }
   .foods{
     width: 100%;
+    margin-bottom: 15px;
   }
   .good-foods-content{
     width: 190px!important;
@@ -184,7 +185,7 @@
     padding: 15px 30px!important;
   }
   .foods-title{
-    font-size: 16px;
+    font-size: 20px;
   }
   .main-content-body{
     padding: 10px 30px!important;
