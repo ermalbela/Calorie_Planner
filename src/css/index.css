@@ -38,7 +38,7 @@
   border-top: 1px solid #e6edef;
 }
 
-.food-text{
+.food-name{
   display: none;
 }
 
@@ -51,6 +51,20 @@
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  border: 1px solid #272525;
+}
+
+.food-text{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  display: none;
+}
+
+.food-name{
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-weight: 600;
 }
 
 .good-foods-img:hover{
@@ -60,10 +74,11 @@
   > h3, h4{
     display: block!important;
     text-align: center;
-    margin: 0!important;
+    margin: 0rem 1rem!important;
     padding-top: 10%;
     color: white;
-    filter: none!important;
-    font-weight: 600;
   }
+
+
+
 }
