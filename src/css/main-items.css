@@ -9,6 +9,7 @@
 .main-content{
   margin: 100px 7px 0px 290px;
   padding: 15px;
+  transition: ease-in-out 0.4s;
 }
 
 .main-sidebar{
@@ -21,7 +22,7 @@
   background: #fff;
   border-right: 1px solid #e6edef;
   text-align: left;
-  transition: 0.3s ease;
+  transition: ease-in-out 0.4s;
 }
 
 body{
