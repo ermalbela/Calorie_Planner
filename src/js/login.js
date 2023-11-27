@@ -14,4 +14,4 @@ container.addEventListener('click', e => {
     loginCard.style.display = 'block';
     registerCard.style.display = 'none';
   }
-})
+});

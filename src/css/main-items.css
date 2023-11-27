@@ -7,7 +7,7 @@
   margin-right: 1%;
 }
 
-.right-header > li > a{
+.right-header  li  a{
   margin: 4px;
   text-decoration: none;
   color: #000;
@@ -60,7 +60,7 @@ body{
   border-bottom: 1px solid #e6edef;
 }
 
-.bar-item-wrapper > li > a{
+.bar-item-wrapper  li  a{
   font-size: 14px;
   max-width: 100%;
   position: relative;
@@ -70,11 +70,11 @@ body{
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: color 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
   border-radius: 10px;
 }
 
-.bar-item-wrapper > li > a:hover{
+.bar-item-wrapper  li  a:hover{
   background-color: #24695c;
   border-color: #24695c;
   color: white;
@@ -87,17 +87,19 @@ li{
   list-style-type: none;
 }
 
-.bar-item-wrapper > li{
+.bar-item-wrapper  li{
   max-width: 90%;
 }
 
 .bar-item-wrapper{
+  margin-top: 6%;
   max-width: 100%;
   display: block;
   flex-direction: column;
   overflow: scroll;
   padding-bottom: 15px;
-  height: calc(100vh - 255px);
+  overflow-x: hidden;
+  height: calc(100vh - 263px);
 }
 
 .main-nav{
@@ -114,7 +116,7 @@ li{
   height: 85px;
 }
 
-body > *{
+body  *{
   font-family: "Montserrat", sans-serif;
   font-weight: 590;
 }
@@ -124,7 +126,7 @@ body > *{
   align-items: center;
 }
 
-.nav-link-wrapper > li{
+.nav-link-wrapper  li{
   margin-right: 25px;
   list-style-type: none;
 }
@@ -145,7 +147,7 @@ body > *{
   font-size: 1.75rem;
   font-weight: 500;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .main-content-title{
@@ -155,7 +157,7 @@ body > *{
   border-bottom: none!important;
 }
 
-.main-content-title > *{
+.main-content-title *{
   padding: 0;
   margin: 0;
 }
@@ -182,11 +184,75 @@ body > *{
   border-radius: 13px;
 }
 
+.custom-scrollbar::-webkit-scrollbar-track{
+  -webkit-box-shadow: none;
+  
+}
+
 .icon-wrapper{
   width: 20px;
   transition: filter 0.2s ease-in-out;
   padding-right: 0.75rem;
 }
+
+/*############################
+#####DARK ONLY CSS START######
+############################*/
+
+body.dark-only {
+  background-color: #202938;
+  color: #fff;
+  
+  .main-sidebar, .main-content  .main-content-title, .main-content-body, .main-nav {
+  background-color: #111727;
+  }
+  .main-content-title, .main-content-body, .foods{
+    box-shadow: 1px 1px 2px 1px rgba(29, 28, 28, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .main-content-title{
+    border-bottom: none;
+  }
+  .main-content-body{
+    border-top: none;
+  }
+  .main-sidebar  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #f5f7fb!important;
+    box-shadow: inset 0 0 0 10px;
+  }
+  .main-sidebar{
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .main-sidebar  .user-wrapper{
+    box-shadow: 1px 1px 2px 1px rgba(29, 28, 28, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .main-nav{
+    border-bottom: 1px solid rgba(36, 105, 92, 0.2);
+    box-shadow: 0 0 20px rgba(25, 124, 207, 0.08);
+  }
+  .bar-item-wrapper  li  a{
+    color: white;
+    .icon-wrapper {
+      filter: invert(1);
+    }
+  }
+  .sun{
+    filter: invert(1);
+  }
+  .right-header li a{
+    color: white;
+  }
+}
+/*#########################
+######DARK ONLY CSS END####
+#########################*/
+
+
+
+/*#########################
+######RESPONSIVE CSS START#
+#########################*/
 
 @media only screen and (max-width: 915px){
   .main-sidebar{
@@ -201,4 +267,4 @@ body > *{
   h4, h3{
     padding-top: 6%;
   }
-}
+}  
