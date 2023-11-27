@@ -43,7 +43,6 @@
 
 .good-foods-img{
   border-radius: 5%;
-  background-image: url('../images/gain-weight/brown-rice.jpg');
   background-repeat: no-repeat;
   width: 230px;
   height: 270px;
@@ -51,6 +50,7 @@
   background-position: center;
   overflow: hidden;
   border: 1px solid #272525;
+  transition: ease-in-out 0.3s;
 }
 
 .food-text{
