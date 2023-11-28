@@ -237,9 +237,7 @@ body.dark-only {
       filter: invert(1);
     }
   }
-  .sun{
-    filter: invert(1);
-  }
+  
   .right-header li a{
     color: white;
   }
