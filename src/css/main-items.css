@@ -17,6 +17,29 @@
   display: none;
 }
 
+.login-btn{
+  background-color: #24695c;
+  color: white;
+  border: none;
+  height: 36px;
+  width: 74px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;        
+  margin-left: 8px;
+  transition: box-shadow 0.15s;
+}
+
+.login-btn:hover{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:active{
+  opacity: 0.8;
+}
+
+
 .main-content{
   margin: 100px 7px 0px 290px;
   padding: 15px;
