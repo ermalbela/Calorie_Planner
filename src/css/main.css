@@ -97,6 +97,15 @@ body{
   border-radius: 10px;
 }
 
+a.active{
+  background-color: #24695c;
+  border-color: #24695c;
+  color: white;
+  .icon-wrapper{
+    filter: invert(1);
+  }
+}
+
 .bar-item-wrapper  li  a:hover{
   background-color: #24695c;
   border-color: #24695c;
