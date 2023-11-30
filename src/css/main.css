@@ -1,3 +1,11 @@
+.left-header{
+  width: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-right: lightgray;
+}
 
 .right-header{
   display: flex;
@@ -7,10 +15,18 @@
   margin-right: 1%;
 }
 
-.right-header  li  a{
+.right-header li a{
   margin: 4px;
   text-decoration: none;
   color: #000;
+}
+
+.right-header li a:hover, .right-header li img:hover{
+  filter: brightness(70%);
+}
+
+.right-header li a:active, .right-header li img:active{
+  filter: brightness(50%);
 }
 
 .right-header .sidebar-none-links{
@@ -34,11 +50,6 @@
 .login-btn:hover{
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
-
-.login-btn:active{
-  opacity: 0.8;
-}
-
 
 .main-content{
   margin: 100px 7px 0px 290px;
@@ -216,11 +227,6 @@ body  *{
   border-radius: 13px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track{
-  -webkit-box-shadow: none;
-  
-}
-
 .icon-wrapper{
   width: 20px;
   transition: filter 0.2s ease-in-out;
@@ -277,6 +283,54 @@ body.dark-only {
 /*#########################
 ######DARK ONLY CSS END####
 #########################*/
+
+
+
+/*#########################
+#####MIX THEME CSS START###
+#########################*/
+body.mix{
+  background-color: #f5f7fb;
+  .main-sidebar{
+    background-color: #111727;
+    color: #fff;
+  }
+  .main-sidebar  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #f5f7fb!important;
+    box-shadow: inset 0 0 0 10px;
+  }
+  .main-sidebar{
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+  .main-sidebar .user-wrapper{
+    box-shadow: 1px 1px 2px 1px rgba(29, 28, 28, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .main-nav{
+    border-bottom: 1px solid rgba(36, 105, 92, 0.2);
+    box-shadow: 0 0 20px rgba(25, 124, 207, 0.08);
+  }
+  .bar-item-wrapper  li  a{
+    color: white;
+    .icon-wrapper {
+      filter: invert(1);
+    }
+  }
+  .left-header{
+    display: flex;
+    background-color: #111727;
+    box-shadow: 1px 1px 2px 1px rgba(29, 28, 28, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .right-header li a{
+    color: white;
+  }
+}
+/*#########################
+#####MIX THEME CSS END#####
+#########################*/
+
 
 
 
