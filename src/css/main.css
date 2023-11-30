@@ -1,10 +1,17 @@
 .left-header{
-  width: 290px;
   display: flex;
+  max-width: 290px;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  height: 100%;
-  border-right: lightgray;
+  padding: 24px 0;
+  border-right: 1px solid #e6edef;
+  max-height: -webkit-fill-available;
+  width: 100%;
+}
+
+.logo-wrapper{
+  width: 50%;
+  margin-left: 62px;
 }
 
 .right-header{
@@ -21,16 +28,50 @@
   color: #000;
 }
 
-.right-header li a:hover, .right-header li img:hover{
-  filter: brightness(70%);
+.right-header li img{
+  border-radius: 4px;
 }
 
-.right-header li a:active, .right-header li img:active{
-  filter: brightness(50%);
+.right-header li img:hover{
+  background-color: rgba(36, 105, 92, 0.1);
+}
+
+.right-header li img:active{
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .right-header .sidebar-none-links{
   display: none;
+}
+
+.toggle-wrapper{
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.toggle{
+  width: 24px;
+  border-radius: 15%;
+  transition: ease 0.2s;
+}
+
+.toggle:hover{
+  background-color: rgba(36, 105, 92, 0.1);
+}
+
+.toggle:active{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.closed-sidebar{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.closed-icon{
+  transform: rotate(180deg);
 }
 
 .login-btn{
@@ -45,10 +86,6 @@
   cursor: pointer;        
   margin-left: 8px;
   transition: box-shadow 0.15s;
-}
-
-.login-btn:hover{
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .main-content{
@@ -275,7 +312,9 @@ body.dark-only {
       filter: invert(1);
     }
   }
-  
+  .left-header{
+    border-right: 1px solid rgba(36, 105, 92, 0.2);
+  }
   .right-header li a{
     color: white;
   }
@@ -318,10 +357,9 @@ body.mix{
     }
   }
   .left-header{
-    display: flex;
     background-color: #111727;
     box-shadow: 1px 1px 2px 1px rgba(29, 28, 28, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
   }
   .right-header li a{
     color: white;
@@ -340,7 +378,8 @@ body.mix{
 
 @media only screen and (max-width: 915px){
   .main-sidebar{
-    display: none!important;
+    opacity: 0;
+    visibility: hidden;
   }
   .main-content{
     margin: 50px 7px 0px 7px!important;

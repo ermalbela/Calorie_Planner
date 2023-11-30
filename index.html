@@ -10,13 +10,20 @@
 <body>
   <div class="main-nav">
     <div class="left-header">
-      <img src="./src/images/tri_logo_dark.png" alt="logo">
+      <div class="logo-wrapper">
+        <a href="index.html">
+          <img src="./src/images/tri_logo_dark.png" alt="logo" class="logo">
+        </a>
+      </div>
+      <div class="toggle-wrapper">
+        <img src="./src/images/left-arrow.png" alt="arrow" class="toggle">
+      </div>
     </div>
     <div class="right-header">
       <li>
-        <img src="./src/images/light-to-dark.png" alt="moon" style="width: 30px;" class="moon">
-        <img src="./src/images/light-only.png" alt="sun" style="width: 30px; display: none;" class="sun">
-        <img src="./src/images/dark-only.png" alt="light" style="width: 30px; display: none;" class="mix">
+        <img src="./src/images/dark-only.png" alt="moon" style="width: 30px;" class="moon">
+        <img src="./src/images/light-to-dark.png" alt="sun" style="width: 30px; display: none;" class="sun">
+        <img src="./src/images/sun.png" alt="light" style="width: 30px; display: none;" class="mix">
       </li>
       <li class="sidebar-none-links">
         <a href="#">About Us</a>
@@ -237,6 +244,20 @@
     </div>
   </div>
 
+  <script>
+    document.querySelector('.toggle').addEventListener('click', () => {
+      if(document.querySelector('.main-sidebar').classList.contains('closed-sidebar')){
+        document.querySelectorAll('.good-foods-wrapper').forEach(item => {
+          item.style.justifyContent = 'space-between';
+        })
+      } else{
+        document.querySelectorAll('.good-foods-wrapper').forEach(item => {
+          item.style.justifyContent = 'space-evenly';
+        })
+      }
+    })
+    
+  </script>
   <script src="./src/js/main.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 const sun = document.querySelector('.sun');
 const moon = document.querySelector('.moon');
 const mix_theme = document.querySelector('.mix');
+const arrow = document.querySelector('.toggle');
 
 if(localStorage.getItem('body-theme') == "light-only"){
   document.body.className = 'light-only';
@@ -41,4 +42,16 @@ mix_theme.addEventListener('click', () => {
   mix_theme.style.display = 'none';
   document.body.className = 'light-only';
   localStorage.setItem('body-theme', "light-only" );
+})
+
+document.querySelector('.toggle-wrapper').addEventListener('click', e => {
+  if(e.target.className == 'toggle'){
+    document.querySelector('.main-sidebar').classList.add('closed-sidebar');
+    arrow.classList.add('closed-icon');
+    document.querySelector('.main-content').style.margin = '90px 7px 0px';
+  } else if(e.target.classList.contains('closed-icon')){
+    document.querySelector('.main-sidebar').classList.remove('closed-sidebar');
+    arrow.classList.remove('closed-icon');
+    document.querySelector('.main-content').style.margin = '100px 7px 0px 290px';
+  }
 })
