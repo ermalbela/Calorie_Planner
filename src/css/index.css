@@ -73,7 +73,7 @@
   transition: ease-in-out 0.4s;
   transform: scale(1.05);
   box-shadow: inset 0 0 155px 43px #000000;
-  > h3, h4{
+  .food-name, .food-text{
     display: block!important;
     text-align: center;
     padding-top: 10%;

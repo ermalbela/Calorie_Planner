@@ -64,6 +64,39 @@
       <h2>Title</h2>
     </div>
     <div class="main-content-body">
+      <div class="add-form">
+        <div class="form-title">
+          <h2>Form Title</h2>
+        </div>
+        <div class="form-body">
+          <div class="input-container">
+            <label>Food Name</label>
+            <input type="text" class="add-form-input foodName" placeholder="Food name..">
+            <p class="invalid foodNameError">Please Enter a valid food name!</p>
+          </div>
+          <div class="input-container">
+            <label>Calories</label>
+            <input type="number" class="add-form-input calories"placeholder="Calories..">
+            <p class="invalid caloriesError">Please Enter a valid Calorie!</p>
+          </div>
+          <div class="input-container">
+            <label>Protein</label>
+            <input type="text" class="add-form-input protein" placeholder="Protein...">
+            <p class="invalid foodNameError">Please Enter a valid Protein!</p>
+          </div>
+          <div class="input-container">
+            <label>Image</label>
+            <input type="text" class="add-form-input image" placeholder="Image...">
+            <p class="invalid foodNameError">Please Enter a valid Image!</p>
+          </div>
+
+          <div class="button-container">
+            <button class="add-btn">Add Food</button>
+            <button class="clear-btn">Clear Fields</button>
+          </div>
+        </div>
+      </div>
+    </div>
         <!-- ##############################
         #######IMPLEMENT YOUR FORM HERE####
         #######CSS AT your-plan.css########
@@ -71,6 +104,7 @@
     </div>
   </div>
 
+  <script src="/src/js/yourPlan.js"></script>
   <script src="./src/js/main.js"></script>
 </body>
 </html>

@@ -281,7 +281,7 @@ body.dark-only {
   .main-sidebar, .main-content  .main-content-title, .main-content-body, .main-nav {
   background-color: #111727;
   }
-  .main-content-title, .main-content-body, .foods{
+  .main-content-title, .main-content-body, .foods, .add-form{
     box-shadow: 1px 1px 2px 1px rgba(29, 28, 28, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
@@ -317,6 +317,14 @@ body.dark-only {
   }
   .right-header li a{
     color: white;
+  }
+  .add-form-input{
+    background: #202938;
+    border: 1px solid rgba(36, 105, 92, 0.2)!important;
+    color: #fff!important;
+  }
+  .add-form-input:focus-visible{
+    outline:#111727 auto 1px!important;
   }
 }
 /*#########################
