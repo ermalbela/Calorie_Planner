@@ -270,6 +270,19 @@ body  *{
   padding-right: 0.75rem;
 }
 
+.right-header-icon{
+  width: 30px;
+  margin: 0 6px;
+}
+
+.right-header-icon-wrapper{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
 /*############################
 #####DARK ONLY CSS START######
 ############################*/
@@ -326,6 +339,12 @@ body.dark-only {
   .add-form-input:focus-visible{
     outline:#111727 auto 1px!important;
   }
+  .maximize{
+    filter: invert(1);
+  }
+  .toggle{
+    filter: brightness(100);
+  }
 }
 /*#########################
 ######DARK ONLY CSS END####
@@ -370,7 +389,10 @@ body.mix{
     border-right: 1px solid rgba(255, 255, 255, 0.2);
   }
   .right-header li a{
-    color: white;
+    color: black;
+  }
+  .toggle{
+    filter: brightness(100);
   }
 }
 /*#########################
@@ -390,12 +412,21 @@ body.mix{
     visibility: hidden;
   }
   .main-content{
-    margin: 50px 7px 0px 7px!important;
+    margin: 70px 7px 0px 7px!important;
   }
   .sidebar-none-links{
     display: block!important;
   }
   h4, h3{
     padding-top: 6%;
+  }
+  .left-header{
+    width: 50%;
+  }
+  .logo-wrapper{
+    margin: 0;
+  }
+  .toggle-wrapper{
+    display: none;
   }
 }  
