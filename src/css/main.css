@@ -14,6 +14,10 @@
   margin-left: 62px;
 }
 
+.logo{
+  cursor: pointer;
+}
+
 .right-header{
   display: flex;
   align-items: center;
@@ -169,6 +173,7 @@ li{
 
 .bar-item-wrapper  li{
   max-width: 90%;
+  margin: 2px 0px;
 }
 
 .bar-item-wrapper{
@@ -343,7 +348,7 @@ body.dark-only {
     filter: invert(1);
   }
   .toggle{
-    filter: brightness(100);
+    filter: brightness(10);
   }
 }
 /*#########################
