@@ -31,7 +31,6 @@ const regexTest = item => {
 }
 
 container.addEventListener('click', e => {
-  e.preventDefault();
 
   if(e.target == registerLink){
     loginCard.style.display = 'none';
@@ -44,6 +43,8 @@ container.addEventListener('click', e => {
   }
   
   if(e.target.classList.contains('loginBtn')){
+    e.preventDefault();
+
     if(!usernameRe.test(username.value)){
       regexTest(usernameErr);
     }
@@ -56,6 +57,7 @@ container.addEventListener('click', e => {
   }
 
   if(e.target.classList.contains('registerBtn')){
+    e.preventDefault();
     if(!usernameRe.test(registerUsername.value)){
       regexTest(registerUsernameErr);
     }
