@@ -16,6 +16,9 @@
 
 .logo{
   cursor: pointer;
+  margin-top: 15px;
+  margin-left: 19px;
+  width: 140px;
 }
 
 .right-header{
