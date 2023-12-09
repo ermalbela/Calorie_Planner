@@ -76,7 +76,7 @@
   .food-name, .food-text{
     display: block!important;
     text-align: center;
-    padding-top: 10%;
+    padding-top: 6%;
     color: white;
   }
 }

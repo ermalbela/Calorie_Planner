@@ -3,22 +3,26 @@ const moon = document.querySelector('.moon');
 const mix_theme = document.querySelector('.mix');
 const arrow = document.querySelector('.toggle');
 const maximize = document.querySelector('.maximize');
+const logo = document.querySelector('.logo');
 
 if(localStorage.getItem('body-theme') == "light-only"){
   document.body.className = 'light-only';
   sun.style.display = 'none';
   moon.style.display = 'block';
   mix_theme.style.display = 'none';
+  logo.setAttribute('src', './src/images/logo-light-1.png');
 } else if(localStorage.getItem('body-theme') == "dark-only"){
   document.body.className = 'dark-only';
   moon.style.display = 'none';
   sun.style.display = 'block';
   mix_theme.style.display = 'none';
+  logo.setAttribute('src', './src/images/logo-dark-1.png');
 } else{
   document.body.className = "mix";
   moon.style.display = 'none';
   sun.style.display = 'none';
   mix_theme.style.display = 'block';
+  logo.setAttribute('src', './src/images/logo-dark-1.png');
 }
 
 sun.addEventListener('click', () => {
@@ -27,6 +31,7 @@ sun.addEventListener('click', () => {
   mix_theme.style.display = 'block';
   document.body.className = 'mix';
   localStorage.setItem('body-theme', "mix");
+  logo.setAttribute('src', './src/images/logo-dark-1.png');
 });
 
 moon.addEventListener('click', () => {
@@ -35,6 +40,7 @@ moon.addEventListener('click', () => {
   mix_theme.display = 'none';
   document.body.className = 'dark-only';
   localStorage.setItem('body-theme', "dark-only");
+  logo.setAttribute('src', './src/images/logo-dark-1.png');
 });
 
 mix_theme.addEventListener('click', () => {
@@ -43,6 +49,7 @@ mix_theme.addEventListener('click', () => {
   mix_theme.style.display = 'none';
   document.body.className = 'light-only';
   localStorage.setItem('body-theme', "light-only" );
+  logo.setAttribute('src', './src/images/logo-light-1.png');
 });
 
 document.querySelector('.toggle-wrapper').addEventListener('click', e => {
