@@ -1,0 +1,21 @@
+.best-mixes-wrapper{
+  border: 1px #e6edef solid;
+  width: 100%;
+}
+
+.best-mixes{
+  display: flex;
+  padding: 0 1.5rem;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.best-mixes-title{
+  padding: 1rem 1.5rem;
+  margin: 0;
+}
+
+.best-mixes-content{
+  height: 150px;
+  width: 200px;
+}
