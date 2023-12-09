@@ -299,10 +299,10 @@ body.dark-only {
   background-color: #202938;
   color: #fff;
   
-  .main-sidebar, .main-content  .main-content-title, .main-content-body, .main-nav {
+  .main-sidebar, .main-content  .main-content-title, .main-content-body, .main-nav, .modal-body{
   background-color: #111727;
   }
-  .main-content-title, .main-content-body, .foods, .add-form{
+  .main-content-title, .main-content-body, .foods, .add-form, .best-mixes-wrapper, .modal-body{
     box-shadow: 1px 1px 2px 1px rgba(29, 28, 28, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
@@ -352,6 +352,15 @@ body.dark-only {
   }
   .toggle{
     filter: brightness(10);
+  }
+  .best-mixes-review{
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .modal-content{
+    border: none;
+  }
+  .modal-body{
+    border-radius: 7px;
   }
 }
 /*#########################
