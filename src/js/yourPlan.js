@@ -8,6 +8,8 @@ const image = document.querySelector('.image');
 
 const foodNameRe = /^[A-Za-z]{2,15}$/;
 const caloriesRe = /^[0-9]{1,3}$/;
+const proteinRe = /^[0-9]{1,3}g$/;
+const imageRe = /[^\s]+(.*?).(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)$/;
 
 const clearInputs = (item) => {
   setTimeout(() => {
@@ -26,5 +28,12 @@ addBtn.addEventListener('click', e => {
     document.querySelector('.caloriesError').style.visibility = 'visible';
     clearInputs(document.querySelector('.caloriesError'));
   }
-
+  if(!proteinRe.test(protein.value)){
+    document.querySelector('.proteinError').style.visibility = 'visible';
+    clearInputs(document.querySelector('.proteinError'));
+  }
+  if(!imageRe.test(image.value)){
+    document.querySelector('.imageError').style.visibility = 'visible';
+    clearInputs(document.querySelector('.imageError'));
+  }
 })
