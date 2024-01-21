@@ -11,24 +11,49 @@
         <img src="./src/images/sun.png" alt="light" class="mix right-header-icon">
       </li>
       <li class="sidebar-none-links">
+<<<<<<< HEAD
         <a href="index.php">Main Page</a>
+=======
+        <a href="index.html">Main Page</a>
+>>>>>>> 817f2554a8716215050b4bf1897a65bd46e5b2d4
       </li>
       <li class="sidebar-none-links">
         <a href="#">Your Plan</a>
       </li>
       <li class="sidebar-none-links">
+<<<<<<< HEAD
         <a href="suggestedMixes.php">Suggested Mixes</a>
       </li>
       <li>
         <a href="login.php">
+=======
+        <a href="suggestedMixes.html">Suggested Mixes</a>
+      </li>
+      <li>
+        <a href="login.html">
+>>>>>>> 817f2554a8716215050b4bf1897a65bd46e5b2d4
           <button class="login-btn">Log Out</button>
         </a>
       </li>
     </div>
   </div>
+<<<<<<< HEAD
   <?php
     include_once './src/Components/sidebar.php';
   ?>
+=======
+  <div class="main-sidebar">
+    <div class="user-wrapper">
+      <img src="./src/images/user.jpeg" alt="user" class="user-profile">
+      <h4>Unknown User</h4>
+    </div>
+    <div class="bar-item-wrapper custom-scrollbar">
+      <li><a href="index.html" class="bar-item"><img src="./src/images/home.png" class="icon-wrapper" alt="Edit Icon">Main Page</a></li>
+      <li><a href="#" class="bar-item active"><img src="./src/images/edit-icon.png" class="icon-wrapper" alt="Edit Icon">Make Your Own  Plan</a></li>
+      <li><a href="suggestedMixes.html" class="bar-item"><img src="./src/images/thumbs-up.png" class="icon-wrapper" alt="Thumb Up">Suggested Mixes</a></li>
+    </div>
+  </div>
+>>>>>>> 817f2554a8716215050b4bf1897a65bd46e5b2d4
 
   <div class="main-content">
     <h3 class="main-content-header">Make Your Own Plan!</h3>
@@ -73,4 +98,8 @@
   <script src="./src/js/yourPlan.js"></script>
   <script src="./src/js/main.js"></script>
 </body>
+<<<<<<< HEAD
 </php>
+=======
+</html>
+>>>>>>> 817f2554a8716215050b4bf1897a65bd46e5b2d4

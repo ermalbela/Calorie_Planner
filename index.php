@@ -26,9 +26,29 @@
       </li>
     </div>
   </div>
+<<<<<<< HEAD
   <?php
     include_once './src/Components/sidebar.php';
   ?>
+=======
+  <div class="main-sidebar">
+    <div class="user-wrapper">
+      <img src="./src/images/user.jpeg" alt="user" class="user-profile">
+      <h4>Unknown User</h4>
+    </div>
+    <div class="bar-item-wrapper custom-scrollbar">
+      <li>
+        <a href="#" class="bar-item active"><img src="./src/images/home.png" class="icon-wrapper" alt="Edit Icon">Main Page</a>
+      </li>
+      <li>
+        <a href="yourPlan.php" class="bar-item"><img src="./src/images/edit-icon.png" class="icon-wrapper" alt="Edit Icon">Make Your Own  Plan</a>
+      </li>
+      <li>
+        <a href="suggestedMixes.php" class="bar-item"><img src="./src/images/thumbs-up.png" class="icon-wrapper" alt="Thumb Up">Suggested Mixes</a>
+      </li>
+    </div>
+  </div>
+>>>>>>> 817f2554a8716215050b4bf1897a65bd46e5b2d4
   
   <div class="main-content">
     <h3 class="main-content-header">Main Page</h3>
