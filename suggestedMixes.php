@@ -11,7 +11,6 @@
         <img src="./src/images/sun.png" alt="light" class="mix right-header-icon">
       </li>
       <li class="sidebar-none-links">
-<<<<<<< HEAD
         <a href="index.php">Main Page</a>
       </li>
       <li class="sidebar-none-links">
@@ -22,46 +21,14 @@
       </li>
       <li>
         <a href="login.php">
-=======
-        <a href="index.html">Main Page</a>
-      </li>
-      <li class="sidebar-none-links">
-        <a href="yourPlan.html">Your Plan</a>
-      </li>
-      <li class="sidebar-none-links">
-        <a href="suggestedMixes.html">Suggested Mixes</a>
-      </li>
-      <li>
-        <a href="login.html">
->>>>>>> 817f2554a8716215050b4bf1897a65bd46e5b2d4
           <button class="login-btn">Log Out</button>
         </a>
       </li>
     </div>
   </div>
-<<<<<<< HEAD
   <?php
     include_once './src/Components/sidebar.php';
   ?>
-=======
-  <div class="main-sidebar">
-    <div class="user-wrapper">
-      <img src="./src/images/user.jpeg" alt="user" class="user-profile">
-      <h4>Unknown User</h4>
-    </div>
-    <div class="bar-item-wrapper custom-scrollbar">
-      <li>
-        <a href="index.html" class="bar-item"><img src="./src/images/home.png" class="icon-wrapper" alt="Edit Icon">Main Page</a>
-      </li>
-      <li>
-        <a href="yourPlan.html" class="bar-item"><img src="./src/images/edit-icon.png" class="icon-wrapper" alt="Edit Icon">Make Your Own  Plan</a>
-      </li>
-      <li>
-        <a href="#" class="bar-item active"><img src="./src/images/thumbs-up.png" class="icon-wrapper" alt="Thumb Up">Suggested Mixes</a>
-      </li>
-    </div>
-  </div>
->>>>>>> 817f2554a8716215050b4bf1897a65bd46e5b2d4
 
   <div class="main-content">
     <h3 class="main-content-header">Suggested Mixes</h3>
@@ -288,11 +255,7 @@
 
     function openModal(title, ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6){
       modal.style.display = "block";
-<<<<<<< HEAD
       document.querySelector('.modal-body').innerphp = `
-=======
-      document.querySelector('.modal-body').innerHTML = `
->>>>>>> 817f2554a8716215050b4bf1897a65bd46e5b2d4
         <h2>${title}</h2>  
         <p>${ingredient1}</p>
         <p>${ingredient2}</p>
@@ -309,8 +272,3 @@
     }
   </script>
 </body>
-<<<<<<< HEAD
-</php>
-=======
-</html>
->>>>>>> 817f2554a8716215050b4bf1897a65bd46e5b2d4
