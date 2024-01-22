@@ -1,34 +1,7 @@
 <?php
-  include_once './src/Components/header.php'
+  include_once '../src/Components/header.php';
+  include_once '../src/Components/sidebar.php';
 ?>
-    <div class="right-header">
-      <li class="right-header-icon-wrapper">
-        <img src="src/images/maximize.png" alt="" class="right-header-icon maximize">
-      </li>
-      <li class="right-header-icon-wrapper">
-        <img src="./src/images/light-to-dark.png" alt="moon" class="moon right-header-icon">
-        <img src="./src/images/dark-to-light.png" alt="sun"  class="sun right-header-icon">
-        <img src="./src/images/sun.png" alt="light" class="mix right-header-icon">
-      </li>
-      <li class="sidebar-none-links">
-        <a href="index.php">Main Page</a>
-      </li>
-      <li class="sidebar-none-links">
-        <a href="yourPlan.php">Your Plan</a>
-      </li>
-      <li class="sidebar-none-links">
-        <a href="suggestedMixes.php">Suggested Mixes</a>
-      </li>
-      <li>
-        <a href="login.php">
-          <button class="login-btn">Log Out</button>
-        </a>
-      </li>
-    </div>
-  </div>
-  <?php
-    include_once './src/Components/sidebar.php';
-  ?>
 
   <div class="main-content">
     <h3 class="main-content-header">Suggested Mixes</h3>
@@ -48,7 +21,7 @@
           <div class="best-mixes-parent">
             <div class="best-mixes-content">
               <div class="mixes-image-container">
-                <img src="./src/images/mixes/blueberry.jpg" alt="" class="mixes-image">
+                <img src="../src/images/mixes/blueberry.jpg" alt="" class="mixes-image">
               </div>
             </div>
             <div class="best-mixes-review">
@@ -76,7 +49,7 @@
           <div class="best-mixes-parent">
             <div class="best-mixes-content">
               <div class="mixes-image-container">
-                <img src="./src/images/mixes/spinach.jpg" alt="" class="mixes-image">
+                <img src="../src/images/mixes/spinach.jpg" alt="" class="mixes-image">
               </div>
             </div>
             <div class="best-mixes-review">
@@ -104,7 +77,7 @@
           <div class="best-mixes-parent">
             <div class="best-mixes-content">
               <div class="mixes-image-container">
-                <img src="./src/images/mixes/power-booster.jpg" alt="" class="mixes-image">
+                <img src="../src/images/mixes/power-booster.jpg" alt="" class="mixes-image">
               </div>
             </div>
             <div class="best-mixes-review">
@@ -132,7 +105,7 @@
           <div class="best-mixes-parent">
             <div class="best-mixes-content">
               <div class="mixes-image-container">
-                <img src="./src/images/mixes/choco-banana.jpg" alt="" class="mixes-image">
+                <img src="../src/images/mixes/choco-banana.jpg" alt="" class="mixes-image">
               </div>
             </div>
             <div class="best-mixes-review">
@@ -161,7 +134,7 @@
           <div class="best-mixes-parent">
             <div class="best-mixes-content">
               <div class="mixes-image-container">
-                <img src="./src/images/mixes/strawberry-banana.jpg" alt="" class="mixes-image">
+                <img src="../src/images/mixes/strawberry-banana.jpg" alt="" class="mixes-image">
               </div>
             </div>
             <div class="best-mixes-review">
@@ -190,7 +163,7 @@
           <div class="best-mixes-parent">
             <div class="best-mixes-content">
               <div class="mixes-image-container">
-                <img src="./src/images/mixes/peanut-butter.jpg" alt="" class="mixes-image">
+                <img src="../src/images/mixes/peanut-butter.jpg" alt="" class="mixes-image">
               </div>
             </div>
             <div class="best-mixes-review">
@@ -218,7 +191,7 @@
           <div class="best-mixes-parent">
             <div class="best-mixes-content">
               <div class="mixes-image-container">
-                <img src="./src/images/mixes/kale-blueberry.jpg" alt="" class="mixes-image">
+                <img src="../src/images/mixes/kale-blueberry.jpg" alt="" class="mixes-image">
               </div>
             </div>
             <div class="best-mixes-review">
@@ -249,13 +222,13 @@
     </div>
   </div>
 
-  <script src="./src/js/main.js"></script>
+  <script src='../src/js/main.js'></script>
   <script>
     const modal = document.getElementById("myModal");
 
     function openModal(title, ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6){
       modal.style.display = "block";
-      document.querySelector('.modal-body').innerphp = `
+      document.querySelector('.modal-body').innerHTML = `
         <h2>${title}</h2>  
         <p>${ingredient1}</p>
         <p>${ingredient2}</p>
@@ -272,3 +245,4 @@
     }
   </script>
 </body>
+</html>

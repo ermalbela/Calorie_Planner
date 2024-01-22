@@ -5,10 +5,10 @@ require_once('userModel.php');
     $user->setUsername($_POST['registerUsername']);
     $user->setPassword($_POST['registerPassword']);
     $user->setEmail($_POST['registerEmail']);
-    $user->setRole("User");
+    $user->setRole('User');
     $user->insertToDB();
 
-    header('Location:http://localhost/Ubt--/login.php');
+    header('Location:http://localhost/UbtDocs/pages/login.php');
   }
 
 ?>

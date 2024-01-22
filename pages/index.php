@@ -1,34 +1,7 @@
 <?php
-  include_once './src/Components/header.php';
-?>    
-    <div class="right-header">
-      <li class="right-header-icon-wrapper">
-        <img src="src/images/maximize.png" alt="" class="right-header-icon maximize">
-      </li>
-      <li class="right-header-icon-wrapper">
-        <img src="./src/images/light-to-dark.png" alt="moon" class="moon right-header-icon">
-        <img src="./src/images/dark-to-light.png" alt="sun"  class="sun right-header-icon">
-        <img src="./src/images/sun.png" alt="light" class="mix right-header-icon">
-      </li>
-      <li class="sidebar-none-links">
-        <a href="#">Main Page</a>
-      </li>
-      <li class="sidebar-none-links">
-        <a href="yourPlan.php">Your Plan</a>
-      </li>
-      <li class="sidebar-none-links">
-        <a href="suggestedMixes.php">Suggested Mixes</a>
-      </li>
-      <li>
-        <a href="login.php">
-          <button class="login-btn">Log Out</button>
-        </a>
-      </li>
-    </div>
-  </div>
-  <?php
-    include_once './src/Components/sidebar.php';
-  ?>
+  include_once '../src/Components/header.php';
+  include_once '../src/Components/sidebar.php';
+?>
   
   <div class="main-content">
     <h3 class="main-content-header">Main Page</h3>
@@ -39,8 +12,29 @@
       <div class="foods">
         <h2 class="foods-title">Gain Weight</h2>
         <div class="good-foods-wrapper">
-          <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url('./src/images/gain-weight/sweet-potatoes.jpg');">
+          <?php
+            require_once('../models/foodModel.php');
+            $food = new Food();
+            $data = $food->getGainWeight();
+
+            if(count($data) != 0){
+              foreach($data as $food){
+                echo '<div class="good-foods-content">
+                        <div class="good-foods-img" style="background-image: url('. '../src/images/gain-weight/' . $food['image'] . ')">' .
+                          '<h3 class="food-name">' . $food['Title'] .'</h3>' .
+                          '<h3 class="food-text">' . $food['Serving'] .'</h3>' .
+                          '<h4 class="food-text">Protein: ' . $food['Protein'] .'</h4>' .
+                          '<h4 class="food-text">Calorie: ' . $food['Calorie'] .'</h4>' .
+                          '<h4 class="food-text">Fat: ' . $food['Fat'] .'</h4>' .
+                          '<h4 class="food-text">Carbs: ' . $food['Carbs'] .'</h4>' .
+                        '</div>
+                      </div>';
+              }
+            }
+          ?>
+
+          <!-- <div class="good-foods-content">
+            <div class="good-foods-img" style="background-image: url('../src/images/gain-weight/sweet-potatoes.jpg');">
                 <h3 class="food-name">Sweet Potatoes</h3>
                 <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 2.2g</h4>
@@ -50,7 +44,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/gain-weight/macademia-nuts.jpg)">
+            <div class="good-foods-img" style="background-image: url(../src/images/gain-weight/macademia-nuts.jpg)">
               <h3 class="food-name">Macademia Nuts</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 8g</h4>
@@ -60,7 +54,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/gain-weight/mackarel.jpg);"> 
+            <div class="good-foods-img" style="background-image: url(../src/images/gain-weight/mackarel.jpg);"> 
               <h3 class="food-name">Mackarel</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 19g</h4>
@@ -70,7 +64,7 @@
             </div>
             </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/gain-weight/whole-wheat-pasta.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/gain-weight/whole-wheat-pasta.jpg);">
               <h3 class="food-name">Whole Wheat Pasta</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 10g</h4>
@@ -80,7 +74,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/gain-weight/brown-rice.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/gain-weight/brown-rice.jpg);">
               <h3 class="food-name">Brown Rice</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 10g</h4>
@@ -90,7 +84,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/gain-weight/chickpeas.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/gain-weight/chickpeas.jpg);">
               <h3 class="food-name">Chickpeas</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 20g</h4>
@@ -100,7 +94,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/gain-weight/oats.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/gain-weight/oats.jpg);">
               <h3 class="food-name">Oats</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 13.15g</h4>
@@ -110,7 +104,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/gain-weight/peanut-butter.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/gain-weight/peanut-butter.jpg);">
               <h3 class="food-name">Peanut Butter</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 25g</h4>
@@ -120,7 +114,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/gain-weight/steak.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/gain-weight/steak.jpg);">
               <h3 class="food-name">Steak</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 25g</h4>
@@ -130,7 +124,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/gain-weight/whole-wheat-bread.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/gain-weight/whole-wheat-bread.jpg);">
               <h3 class="food-name">Whole Wheat Bread</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 13g</h4>
@@ -138,14 +132,14 @@
               <h4 class="food-text">Fat: 3.5g</h4>
               <h4 class="food-text">Carbs: 41g</h4>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="foods">
         <h2 class="foods-title">Loose Weight</h2>
         <div class="good-foods-wrapper">
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/loose-weight/berries.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/loose-weight/berries.jpg);">
               <h3 class="food-name">Berries</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 0.7g</h4>
@@ -155,7 +149,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/loose-weight/chilli-pepper.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/loose-weight/chilli-pepper.jpg);">
               <h3 class="food-name">Chilli Pepper</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 1.9g</h4>
@@ -165,7 +159,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/loose-weight/low-fat-milk.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/loose-weight/low-fat-milk.jpg);">
               <h3 class="food-name">Low Fat Milk (per 100ml)</h3>
               <h4 class="food-text">Protein: 3.37g</h4>
               <h4 class="food-text">Calorie: 42</h4>
@@ -174,7 +168,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/loose-weight/broccoli.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/loose-weight/broccoli.jpg);">
               <h3 class="food-name">Broccoli</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 2.53g</h4>
@@ -184,7 +178,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/loose-weight/green-peas.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/loose-weight/green-peas.jpg);">
               <h3 class="food-name">Green Peas</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 5.15g</h4>
@@ -194,7 +188,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img"  style="background-image: url(./src/images/loose-weight/almonds.jpg);">
+            <div class="good-foods-img"  style="background-image: url(../src/images/loose-weight/almonds.jpg);">
               <h3 class="food-name">Almonds</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 21.94g</h4>
@@ -204,7 +198,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/loose-weight/water.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/loose-weight/water.jpg);">
               <h3 class="food-name">Lemon Water (per 100ml)</h3>
               <h4 class="food-text">Protein: 0.04g</h4>
               <h4 class="food-text">Calorie: 3</h4>
@@ -213,7 +207,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/loose-weight/shrimps.png);">
+            <div class="good-foods-img" style="background-image: url(../src/images/loose-weight/shrimps.png);">
               <h3 class="food-name">Shrimps</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 20.31g</h4>
@@ -223,7 +217,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/loose-weight/avocado.jpg);">
+            <div class="good-foods-img" style="background-image: url(../src/images/loose-weight/avocado.jpg);">
               <h3 class="food-name">Avocado</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 1.78g</h4>
@@ -233,7 +227,7 @@
             </div>
           </div>
           <div class="good-foods-content">
-            <div class="good-foods-img" style="background-image: url(./src/images/loose-weight/soup.png);">
+            <div class="good-foods-img" style="background-image: url(../src/images/loose-weight/soup.png);">
               <h3 class="food-name">Soup</h3>
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 10g</h4>
@@ -261,6 +255,6 @@
     })
     
   </script>
-  <script src="./src/js/main.js"></script>
+  <script src="../src/js/main.js"></script>
 </body>
 </html>

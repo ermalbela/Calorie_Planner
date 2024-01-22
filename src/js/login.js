@@ -43,28 +43,32 @@ container.addEventListener('click', e => {
   }
   
   if(e.target.classList.contains('loginBtn')){
-    // e.preventDefault();
 
     if(!usernameRe.test(username.value)){
+      e.preventDefault();
       regexTest(usernameErr);
     }
     if(!passwordRe.test(password.value)){
+      e.preventDefault();
       regexTest(passwordErr);
     }
     if(!emailRe.test(email.value)){
+      e.preventDefault();
       regexTest(emailErr);
     }
   }
 
   if(e.target.classList.contains('registerBtn')){
-    // e.preventDefault();
     if(!usernameRe.test(registerUsername.value)){
+      e.preventDefault();
       regexTest(registerUsernameErr);
     }
     if(!passwordRe.test(registerPassword.value)){
+      e.preventDefault();
       regexTest(registerPasswordErr);
     }
     if(!emailRe.test(registerEmail.value)){
+      e.preventDefault();
       regexTest(registerEmailErr);
     }
   }

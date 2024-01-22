@@ -232,6 +232,10 @@ body  *{
   font-size: 14px;
 }
 
+.user-wrapper h5{
+  margin: 0.5rem 0.5rem;
+}
+
 .main-content-header{
   font-size: 1.75rem;
   font-weight: 500;
@@ -290,6 +294,11 @@ body  *{
   display: flex;
   width: 40px;
   height: 40px;
+}
+
+.successAlert{
+  color: white;
+  background-color: green;
 }
 
 /*############################
