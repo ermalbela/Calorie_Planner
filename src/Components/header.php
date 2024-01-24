@@ -12,6 +12,10 @@
     $name = "suggestedMixes.css";
   }
 
+  if (!isset($_COOKIE['username'])) {
+    header('Location:http://localhost/UBTDocs/pages/errorPage.php');
+    exit();
+  }
 
 echo '
   <!DOCTYPE html>
@@ -22,7 +26,9 @@ echo '
     <title>Calorie Planner</title>
     <link rel="shortcut icon" href="../src/images/logo-light-1.png" type="image/x-icon">
     <link rel="stylesheet" href="../src/css/'. $name .'">
-    <link rel="stylesheet" href="../src/css/main.css">  
+    <link rel="stylesheet" href="../src/css/main.css">' .
+      ($filename == "suggestedMixes.php" ? '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />' : '')
+    . '
   </head>
   <body>
     <div class="main-nav">

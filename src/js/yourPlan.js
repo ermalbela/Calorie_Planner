@@ -8,12 +8,14 @@ const image = document.querySelector('.image');
 const carbs = document.querySelector('.carbs');
 const fat = document.querySelector('.fat');
 const serving = document.querySelector('.serving');
+const dropdownBtn = document.querySelector('.dropDownBtn');
+
 
 const foodNameRe = /^[A-Za-z]{1,15}?[ -]?[A-Za-z]{1,15}?[ -]?[A-Za-z]{1,15}$/;
 const caloriesRe = /^[0-9]{1,3}$/;
 const proteinRe = /^[0-9]{0,3}?\.?\d+g$/;
 const imageRe = /[^\s]+(.*?).(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)$/;
-const servingRe = /^per?[s -][0-9]{1,4}g$/;
+const servingRe = /^per?[s -][0-9]{1,4}(g|ml)$/;
 
 const clearInputs = (item) => {
   setTimeout(() => {
@@ -58,4 +60,37 @@ addBtn.addEventListener('click', e => {
     document.querySelector('.imageError').style.visibility = 'visible';
     clearInputs(document.querySelector('.imageError'));
   }
+  if(dropdownBtn.value == 'Select Category'){
+    e.preventDefault();
+    document.querySelector('.dropdownError').style.visibility = 'visible';
+    clearInputs(document.querySelector('.dropdownError'));
+  }
 })
+
+
+//==============================
+//======DROPDOWN CONTENT========
+//==============================
+const options = document.querySelectorAll('.dropdownItem');
+
+options.forEach(option => {
+  option.addEventListener('click', e => {
+    e.preventDefault();
+    dropdownBtn.value = option.innerHTML;
+  })
+});
+
+dropdownBtn.addEventListener('click' , e => {
+  e.preventDefault();
+  document.getElementById("myDropdown").classList.toggle("showDropdown");
+});
+
+
+
+document.body.addEventListener('click', e => {
+  if(!e.target.matches('.dropDownBtn')){
+    if(document.querySelector('.dropdown-content').classList.contains('showDropdown')){
+      document.querySelector('.dropdown-content').classList.remove('showDropdown');
+    }
+  }
+});

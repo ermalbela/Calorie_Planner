@@ -81,12 +81,25 @@
       VALUES (?,?,?,?,?,?,?)";
       $stm=$this->dbconn->prepare($sql);
       $stm->execute([$this->title,$this->serving,$this->protein,$this->calorie,$this->fat,$this->carbs,$this->image]);
-      echo "
-        <h3>Sukses</h3>";
     }
 
     public function getGainWeight(){
       $sql='SELECT * FROM gainweight';
+      $stm=$this->dbconn->prepare($sql);
+      $stm->execute();
+      $result =$stm->fetchAll(PDO::FETCH_ASSOC);
+      return $result;
+    }
+
+    public function addLooseWeight(){
+      $sql="INSERT INTO looseweight (title,serving,protein,calorie,fat,carbs,image)
+      VALUES (?,?,?,?,?,?,?)";
+      $stm=$this->dbconn->prepare($sql);
+      $stm->execute([$this->title,$this->serving,$this->protein,$this->calorie,$this->fat,$this->carbs,$this->image]);
+    }
+
+    public function getLooseWeight(){
+      $sql='SELECT * FROM looseweight';
       $stm=$this->dbconn->prepare($sql);
       $stm->execute();
       $result =$stm->fetchAll(PDO::FETCH_ASSOC);

@@ -138,7 +138,27 @@
       <div class="foods">
         <h2 class="foods-title">Loose Weight</h2>
         <div class="good-foods-wrapper">
-          <div class="good-foods-content">
+          <?php
+              require_once('../models/foodModel.php');
+              $food = new Food();
+              $data = $food->getLooseWeight();
+
+              if(count($data) != 0){
+                foreach($data as $food){
+                  echo '<div class="good-foods-content">
+                          <div class="good-foods-img" style="background-image: url('. '../src/images/loose-weight/' . $food['Image'] . ')">' .
+                            '<h3 class="food-name">' . $food['Title'] .'</h3>' .
+                            '<h3 class="food-text">' . $food['Serving'] .'</h3>' .
+                            '<h4 class="food-text">Protein: ' . $food['Protein'] .'</h4>' .
+                            '<h4 class="food-text">Calorie: ' . $food['Calorie'] .'</h4>' .
+                            '<h4 class="food-text">Fat: ' . $food['Fat'] .'</h4>' .
+                            '<h4 class="food-text">Carbs: ' . $food['Carbs'] .'</h4>' .
+                          '</div>
+                        </div>';
+                }
+              }
+            ?>
+          <!-- <div class="good-foods-content">
             <div class="good-foods-img" style="background-image: url(../src/images/loose-weight/berries.jpg);">
               <h3 class="food-name">Berries</h3>
               <h3 class="food-text">(per 100g)</h3>
@@ -169,7 +189,7 @@
           </div>
           <div class="good-foods-content">
             <div class="good-foods-img" style="background-image: url(../src/images/loose-weight/broccoli.jpg);">
-              <h3 class="food-name">Broccoli</h3>
+              <h3 class="food-name">Broccoli</h3>   
               <h3 class="food-text">(per 100g)</h3>
               <h4 class="food-text">Protein: 2.53g</h4>
               <h4 class="food-text">Calorie: 35</h4>
@@ -235,7 +255,7 @@
               <h4 class="food-text">Fat: 3.46g</h4>
               <h4 class="food-text">Carbs: 9.35g</h4>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

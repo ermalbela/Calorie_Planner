@@ -12,6 +12,16 @@
       <form class="add-form" method='POST' action='../registers/registerFoods.php'>
         <div class="form-title">
           <h2>Add Foods To Your Plan</h2>
+          <div>
+            <div class="dropdown">
+              <input type='button' class="dropDownBtn" name='category' value='Select Category'>
+              <div id="myDropdown" class="dropdown-content">
+                <button class='dropdownItem'>Gain Weight</button>
+                <button class='dropdownItem'>Loose Weight</button>
+              </div>
+            </div>
+            <p class='invalid dropdownError'>Please Select a category!</p>
+          </div>
         </div>
         <div class="form-body">
           <div class="input-container">

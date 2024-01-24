@@ -11,7 +11,7 @@ require_once('../models/foodModel.php');
     $food->setImage($_POST['image']);
     
     if($_POST['foodName'] !== '' and $_POST['serving'] !== '' and $_POST['calories'] !== '' and $_POST['protein'] !== '' and $_POST['fat'] !== '' and $_POST['carbs'] !== '' and $_POST['image'] !== ''){
-      $food->addGainWeight();
+      ($_POST['category'] == 'Gain Weight' ? $food->addGainWeight() : $food->addLooseWeight());
     }
     header('Location:http://localhost/UbtDocs/pages/yourPlan.php');
   }

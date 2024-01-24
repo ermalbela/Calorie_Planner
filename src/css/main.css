@@ -310,7 +310,7 @@ body.dark-only {
   color: #fff;
   
   .main-sidebar, .main-content  .main-content-title, .main-content-body, .main-nav, .modal-body{
-  background-color: #111727;
+    background-color: #111727;
   }
   .main-content-title, .main-content-body, .foods, .add-form, .best-mixes-wrapper, .modal-body{
     box-shadow: 1px 1px 2px 1px rgba(29, 28, 28, 0.08);
@@ -357,7 +357,7 @@ body.dark-only {
   .add-form-input:focus-visible{
     outline:#111727 auto 1px!important;
   }
-  .maximize{
+  .maximize, .action-mixes{
     filter: invert(1);
   }
   .toggle{
@@ -371,6 +371,22 @@ body.dark-only {
   }
   .modal-body{
     border-radius: 7px;
+  }
+  .dropdown-content{
+    background-color: #202938!important;
+    border: 1px solid rgba(36, 105, 92, 0.2);
+    box-shadow: 0 0 20px rgba(25, 124, 207, 0.08);
+    >*{
+      color: white!important;
+    }
+
+  }
+  .dropdown-content .dropdownItem{
+    background-color: #202938;
+
+  }
+  .dropdown-content .dropdownItem:hover{
+    background-color: #19212f;
   }
 }
 /*#########################
