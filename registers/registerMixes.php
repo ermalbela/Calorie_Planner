@@ -8,6 +8,7 @@ require_once('../models/mixModel.php');
     $mix->setStars($_POST['stars']);
     $mix->setDateAdded(date("y-m-d"));
     $mix->setImage($_POST['image']);
+    $mix->setAddedBy($_COOKIE['username']);
     $mix->addMix();
     
     // if($_POST['mixName'] !== '' and $_POST['ingredients'] !== '' and $_POST['description'] !== '' and $_POST['stars'] !== '' and $_POST['image'] !== ''){

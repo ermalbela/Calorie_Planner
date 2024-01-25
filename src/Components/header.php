@@ -14,9 +14,11 @@
     $name = "suggestedMixes.css";
   }
 
-  if (!isset($_COOKIE['username'])) {
+  if (!isset($_COOKIE['username']) || !isset($_COOKIE['role']) || !isset($_COOKIE['email'])) {
+    foreach ($_COOKIE as $cookieName => $cookieValue) {
+      setcookie($cookieName, '', time() - 3600, '/');
+    }
     header('Location:http://localhost/UBTDocs/pages/errorPage.php');
-    exit();
   }
 
 echo '
@@ -54,7 +56,7 @@ echo '
         <img src="../src/images/sun.png" alt="light" class="mix right-header-icon">
       </li>
       <li>
-        <a href="login.php">
+        <a href="../pages/logout.php">
           <button class="login-btn">Log Out</button>
         </a>
       </li>

@@ -105,6 +105,10 @@
   max-width: 34px;
 }
 
+.action-btn-wrapper{
+  min-width: 45px;
+}
+
 .action-btn{
   height: 35px;
   background: transparent;
@@ -131,10 +135,130 @@
   margin: 0;
 }
 
+.edit-form{
+  width: 100%;
+}
+
+.form-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-title h2, .dropdown{
+  padding: 1rem 2.4rem 0;
+  margin: 0;
+  transition: ease-in-out 0.5s font-size;
+}
+
+.form-body{
+  padding: 0rem 1.5rem;
+}
+
+.edit-form-input{
+  width: 98%;
+  color: #000;
+  padding: 14px 0px 15px 14px;
+  border-radius: 4px;
+  border: 1px #e6edef solid;
+}
+
+.edit-form-input:focus-visible{
+  outline: #afabab auto 1px;
+}
+
+.edit-form-input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+
+.input-container{
+  padding: 0.7rem 0.7rem 0;
+}
+
+.button-container{
+  padding: 1.5rem 1rem 1.5rem 0.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-btn{
+  background-color: #89861b;
+  color: white;
+  border: none;
+  height: 36px;
+  width: 160px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.clear-btn{
+  background-color: #bc0000;
+  color: white;
+  border: none;
+  height: 36px;
+  width: 160px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.invalid{
+  color: red;
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.dropDownBtn {
+  background-color: #89861b;
+  color: white;
+  border: none;
+  height: 36px;
+  width: 160px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .dropdownItem {
+  color: black;
+  padding: 12px 16px;
+  width: 100%;
+  border: none;
+  display: block;
+}
+
+.dropdown .dropdownItem:hover {
+  background-color: #ddd;
+}
+
+.showDropdown {
+  display: block;
+}
+
 /*####################
 ######MODAL CSS#######
 ######################*/
-.modal {
+.modal , .edit-modal{
   display: none;
   position: fixed; 
   z-index: 1; 
@@ -148,7 +272,7 @@
   background-color: rgba(0,0,0,0.4);
 }
 
-.modal-content {
+.modal-content, .edit-modal-content{
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -163,7 +287,7 @@
   border-radius: 7px;
 }
 
-.modal-body{
+.modal-body, .edit-modal-body{
   padding: 0.2rem 1rem;
 }
 

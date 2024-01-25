@@ -10,10 +10,11 @@
     private $fat;
     private $carbs;
     private $image;
+    private $addedBy;
 
     protected $dbconn;
 
-    public function __construct($id = '', $title = '', $serving = '', $protein = '', $calorie = '', $fat = '', $carbs = '', $image = ''){
+    public function __construct($id = '', $title = '', $serving = '', $protein = '', $calorie = '', $fat = '', $carbs = '', $image = '', $addedBy = ''){
       $this->id = $id;
       $this->title = $title;
       $this->serving = $serving;
@@ -22,6 +23,7 @@
       $this->fat = $fat;
       $this->carbs = $carbs;
       $this->image = $image;
+      $this->addedBy = $addedBy;
 
       $this->dbconn = $this->connectDB();
     }
@@ -74,13 +76,16 @@
     public function getImage(){
       return $this->image;
     }
+    public function setAddedBy($addedBy){
+      $this->addedBy = $addedBy;
+    }
    
     
     public function addGainWeight(){
-      $sql="INSERT INTO gainweight (title,serving,protein,calorie,fat,carbs,image)
-      VALUES (?,?,?,?,?,?,?)";
+      $sql="INSERT INTO gainweight (title,serving,protein,calorie,fat,carbs,image, addedBy)
+      VALUES (?,?,?,?,?,?,?,?)";
       $stm=$this->dbconn->prepare($sql);
-      $stm->execute([$this->title,$this->serving,$this->protein,$this->calorie,$this->fat,$this->carbs,$this->image]);
+      $stm->execute([$this->title, $this->serving, $this->protein, $this->calorie, $this->fat, $this->carbs, $this->image, $this->addedBy]);
     }
 
     public function getGainWeight(){
@@ -92,10 +97,10 @@
     }
 
     public function addLooseWeight(){
-      $sql="INSERT INTO looseweight (title,serving,protein,calorie,fat,carbs,image)
-      VALUES (?,?,?,?,?,?,?)";
+      $sql="INSERT INTO looseweight (title,serving,protein,calorie,fat,carbs,image, addedBy)
+      VALUES (?,?,?,?,?,?,?,?)";
       $stm=$this->dbconn->prepare($sql);
-      $stm->execute([$this->title,$this->serving,$this->protein,$this->calorie,$this->fat,$this->carbs,$this->image]);
+      $stm->execute([$this->title, $this->serving, $this->protein, $this->calorie, $this->fat, $this->carbs, $this->image, $this->addedBy]);
     }
 
     public function getLooseWeight(){
@@ -104,6 +109,32 @@
       $stm->execute();
       $result =$stm->fetchAll(PDO::FETCH_ASSOC);
       return $result;
+    }
+
+    public function deleteGainWeight($id){
+      $sql="DELETE FROM gainweight WHERE id=:id";
+      $stm=$this->dbconn->prepare($sql);
+      $stm->bindParam(':id',$id);
+      $stm->execute();
+      if ($stm==true){
+        header('Location:http://localhost/UBTDocs/pages/index.php');
+      }
+      else {
+        return false;
+      }
+    }
+
+    public function deleteLooseWeight($id){
+      $sql="DELETE FROM looseweight WHERE id=:id";
+      $stm=$this->dbconn->prepare($sql);
+      $stm->bindParam(':id',$id);
+      $stm->execute();
+      if ($stm==true){
+        header('Location:http://localhost/UBTDocs/pages/index.php');
+      }
+      else {
+        return false;
+      }
     }
   }
 ?>

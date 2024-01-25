@@ -9,7 +9,7 @@
       <h2>Your Plan</h2>
     </div>
     <div class="main-content-body">
-      <form class="add-form" method='POST' action='../registers/registerFoods.php'>
+      <form class="add-form" method='POST' action='../registers/registerGainWeight.php'>
         <div class="form-title">
           <h2>Add Foods To Your Plan</h2>
           <div>
@@ -20,7 +20,7 @@
                 <button class='dropdownItem'>Loose Weight</button>
               </div>
             </div>
-            <p class='invalid dropdownError'>Please Select a category!</p>
+            <p class='invalid dropdownError'>Please Select a category!</p>  
           </div>
         </div>
         <div class="form-body">

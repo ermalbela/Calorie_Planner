@@ -29,7 +29,14 @@
 }
 
 .good-foods-content h3, h4, h6, p, h5, h2{
-  margin: 0.5rem 0.5rem;
+  margin: 0.2rem 0.5rem;
+}
+
+.action-btn{
+  background-color: red;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
 }
 
 .foot-item{
@@ -76,7 +83,7 @@
   .food-name, .food-text{
     display: block!important;
     text-align: center;
-    padding-top: 6%;
+    padding-top: 5%;
     color: white;
   }
 }

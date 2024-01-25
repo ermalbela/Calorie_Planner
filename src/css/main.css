@@ -329,10 +329,10 @@ body.dark-only {
   background-color: #202938;
   color: #fff;
   
-  .main-sidebar, .main-content  .main-content-title, .main-content-body, .main-nav, .modal-body{
+  .main-sidebar, .main-content  .main-content-title, .main-content-body, .main-nav, .modal-body, .edit-modal-body{
     background-color: #111727;
   }
-  .main-content-title, .main-content-body, .foods, .add-form, .best-mixes-wrapper, .modal-body{
+  .main-content-title, .main-content-body, .foods, .add-form, .best-mixes-wrapper, .modal-body, .edit-modal-body{
     box-shadow: 1px 1px 2px 1px rgba(29, 28, 28, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
@@ -369,12 +369,12 @@ body.dark-only {
   .right-header li a{
     color: white;
   }
-  .add-form-input{
+  .add-form-input, .edit-form-input{
     background: #202938;
     border: 1px solid rgba(36, 105, 92, 0.2)!important;
     color: #fff!important;
   }
-  .add-form-input:focus-visible{
+  .add-form-input:focus-visible, .edit-form-input:focus-visible{
     outline:#111727 auto 1px!important;
   }
   .maximize, .action-mixes{
@@ -386,10 +386,10 @@ body.dark-only {
   .best-mixes-review{
     border-color: rgba(255, 255, 255, 0.2);
   }
-  .modal-content{
+  .modal-content, .edit-modal-content{
     border: none;
   }
-  .modal-body{
+  .modal-body, .edit-modal-body{
     border-radius: 7px;
   }
   .dropdown-content{

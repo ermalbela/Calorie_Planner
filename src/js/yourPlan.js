@@ -77,7 +77,9 @@ options.forEach(option => {
   option.addEventListener('click', e => {
     e.preventDefault();
     dropdownBtn.value = option.innerHTML;
+    option.innerHTML == 'Gain Weight' ? document.querySelector('.add-form').action = '../registers/registerGainWeight.php' : document.querySelector('.add-form').action = '../registers/registerLooseWeight.php';
   })
+
 });
 
 dropdownBtn.addEventListener('click' , e => {

@@ -27,7 +27,7 @@
         <a href="index.php" class="bar-item' . ($filename == "index.php" ? " active" : '') . '"><img src="../src/images/home.png" class="icon-wrapper" alt="Edit Icon">Main Page</a>
       </li>
       <li>
-        <a href="yourPlan.php" class="bar-item' . ($filename == "yourPlan.php" ? " active" : '') . '"><img src="../src/images/edit-icon.png" class="icon-wrapper" alt="Edit Icon">Make Your Own  Plan</a>
+        <a href="yourPlan.php" class="bar-item' . ($filename == "yourPlan.php" ? " active" : '') . '"><img src="../src/images/edit-icon.png" class="icon-wrapper" alt="Edit Icon">Add To Your Own  Plan</a>
       </li>
       <li>
         <a href="suggestedMixes.php" class="bar-item' . ($filename == "suggestedMixes.php" ? " active" : '') . '"><img src="../src/images/thumbs-up.png" class="icon-wrapper" alt="Thumb Up">Suggested Mixes</a>
