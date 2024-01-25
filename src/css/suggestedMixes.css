@@ -317,42 +317,42 @@
   }
 
   .best-mixes-review {
-    width: 100%; /* Modify to full width for small screens */
-    border-right: none; /* Remove right border for small screens */
+    width: 100%;
+    border-right: none;
     border-bottom: #e6edef 1px solid;
-    margin-left: 0; /* Remove left margin for small screens */
-    padding-right: 0; /* Remove right padding for small screens */
+    margin-left: 0;
+    padding-right: 0;
   }
 
   .best-mixes-parent {
-    flex-direction: column; /* Stack items vertically for small screens */
+    flex-direction: column;
   }
 
   .mixes-image {
-    width: 100%; /* Modify to full width for small screens */
-    height: auto; /* Maintain aspect ratio for images */
+    width: 100%;
+    height: auto;
   }
 
   .date-added, .review-content, .bot-content {
-    width: 100%; /* Modify to full width for small screens */
+    width: 100%;
   }
 
   .review-title {
-    flex-direction: column; /* Stack items vertically for small screens */
-    align-items: center; /* Adjust alignment for small screens */
+    flex-direction: column;
+    align-items: center;
   }
 
   .review-title h3 {
-    margin-bottom: 5px; /* Add space between title and buttons for small screens */
+    margin-bottom: 5px;
   }
 
   .review-title-right > * {
-    margin: 5px 0; /* Add space between buttons for small screens */
+    margin: 5px 0;
   }
 
   .action-mixes, .action-btn {
-    width: 100%; /* Modify to full width for small screens */
-    text-align: center; /* Center text for small screens */
+    width: 100%;
+    text-align: center;
   }
 
   .review-content p{
