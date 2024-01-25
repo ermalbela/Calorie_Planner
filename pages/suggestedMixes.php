@@ -11,17 +11,68 @@
     <div class="main-content-body">
       <div id="myModal" class="modal">
         <div class="modal-content">
-          <div class="modal-body">
-          </div>
+          <div class="modal-body"></div>
         </div>
       </div>
       <div class="best-mixes-wrapper">
         <h2 class="best-mixes-title">Our Mixes</h2>
         <div class="best-mixes">
-          <div class="best-mixes-parent">
+          <?php
+              require_once('../models/mixModel.php');
+              $mix = new Mix();
+              $data = $mix->getMixes();
+
+              if(count($data) != 0){
+                foreach($data as $mix){
+                  $starHtml = '';
+                  for ($i = 0; $i < $mix['Stars']; $i++) {
+                      $starHtml .= '<li><i class="fa fa-star"></i></li>';
+                  }
+                  for ($i = $mix['Stars']; $i < 5; $i++) {
+                      $starHtml .= '<li><i class="far fa-star"></i></li>';
+                  }
+                  
+                  echo '
+                    <div class="best-mixes-parent">
+                      <div class="best-mixes-content">
+                        <div class="mixes-image-container">
+                          <img src="../src/images/mixes/' . $mix['Image'] . '" alt="mixes-image" class="mixes-image">
+                        </div>
+                      </div>
+                      <div class="best-mixes-review">
+                        <div class="review-title">
+                          <h3>'. $mix['Title'] .'</h3>
+                          <div class="review-title-right">
+                            <button class="ingredients" onclick="openModal(`'. strval($mix['Title']) . "` , `" . strval($mix['Ingredients']) .'`)">Ingredients</button>
+                            <button class="action-btn">
+                              <img src="../src/images/edit-mixes.png" alt="edit" class="action-mixes">
+                            </button>
+                            <button class="action-btn">
+                              <img src="../src/images/delete-mixes.png" alt="delete" class="action-mixes">
+                            </button>
+                          </div>
+                        </div>
+                        <div class="review-content">
+                          <p>' . $mix['Description'] . '</p>
+                        </div>
+                        <div class="bot-content">
+                          <div class="date-added">
+                            <span>' . $mix['DateAdded'] . '</span>
+                          </div>
+                          <ul class="review-stars">
+                            ' . $starHtml . '
+                          </ul>
+                        </div>
+                      </div>
+                    </div>  
+                  ';
+                }
+              }
+            ?>
+          <!-- <div class="best-mixes-parent">
             <div class="best-mixes-content">
               <div class="mixes-image-container">
-                <img src="../src/images/mixes/blueberry.jpg" alt="" class="mixes-image">
+                <img src="../src/images/mixes/blueberry.jpg" alt="mixes-image" class="mixes-image">
               </div>
             </div>
             <div class="best-mixes-review">
@@ -57,7 +108,7 @@
           <div class="best-mixes-parent">
             <div class="best-mixes-content">
               <div class="mixes-image-container">
-                <img src="../src/images/mixes/spinach.jpg" alt="" class="mixes-image">
+                <img src="../src/images/mixes/spinach.jpg" alt="mixes-image" class="mixes-image">
               </div>
             </div>
             <div class="best-mixes-review">
@@ -74,7 +125,7 @@
                 </div>
               </div>
               <div class="review-content">
-                <p>Fuel your body for a morning workout or a busy day with this powerful Protein Breakfast Smoothie! Not only is this delightfully sweet smoothie packed with protein, but it's also a great source of calcium and vitamin K to support strong, healthy bones.</p>                  
+                <p>Fuel your body for a morning workout or a busy day with this powerful Protein Breakfast Smoothie! Not only is this delightfully sweet smoothie packed with protein, but it's also a great source of calcium and vitamin K to support strong, healthy bones.</p>
               </div>
               <div class="bot-content">
                 <div class="date-added">
@@ -147,7 +198,7 @@
               </div>
               <div class="review-content">
                 <p>A healthy chocolate and banana protein shake recipe that is so delicious. No one will ever guess how clean and healthy it is.
-                  It's a fun recipe to fool your not-so-healthy-food-loving kids or partner.</p>                  
+                  It's a fun recipe to fool your not-so-healthy-food-loving kids or partner.</p>
               </div>
               <div class="bot-content">
                 <div class="date-added">
@@ -272,11 +323,15 @@
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
+          </div>-->
+        </div> 
       </div>
     </div>
   </div>
+
+  <?php
+    include_once '../src/Components/footer.php';
+  ?>
 
   <script src='../src/js/main.js'></script>
   <script>
@@ -284,23 +339,13 @@
 
     function openModal(title, ingredients) {
         modal.style.display = "block";
-
-        let html = `<h2>${title}</h2>`;
-        for (let i = 1; i < ingredients.length; i++) {
-            html += `<p>${ingredients[i]}</p>`;
+        const ingredientsArr = ingredients.split(',');
+        
+        let output = `<h2>${title}</h2>`;
+        for (let i = 0; i < ingredientsArr.length; i++) {
+            output += `<p>${ingredientsArr[i]}</p>`;
         }
-
-        document.querySelector('.modal-body').innerHTML = html;
-
-        // document.querySelector('.modal-body').innerHTML = `
-        //     <h2>${title}</h2>
-            
-        //     <p>${ingredients[0]}</p>
-        //     <p>${ingredients[1]}</p>
-        //     <p>${ingredients[2]}</p>
-        //     <p>${ingredients[4]}</p>
-        //     <p>${ingredients[5]}</p>
-        // `;
+        document.querySelector('.modal-body').innerHTML = output;
     }
   
     window.onclick = function(event) {

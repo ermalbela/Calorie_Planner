@@ -8,6 +8,8 @@
     $name = "login.css";
   } elseif($filename == "yourPlan.php"){
     $name = "your-plan.css";
+  } elseif($filename == "addMixes.php"){
+    $name = "your-plan.css";
   } else{
     $name = "suggestedMixes.css";
   }
@@ -50,15 +52,6 @@ echo '
         <img src="../src/images/light-to-dark.png" alt="moon" class="moon right-header-icon">
         <img src="../src/images/dark-to-light.png" alt="sun"  class="sun right-header-icon">
         <img src="../src/images/sun.png" alt="light" class="mix right-header-icon">
-      </li>
-      <li class="sidebar-none-links">
-        <a href="index.php">Main Page</a>
-      </li>
-      <li class="sidebar-none-links">
-        <a href="yourPlan.php">Your Plan</a>
-      </li>
-      <li class="sidebar-none-links">
-        <a href="suggestedMixes.php">Suggested Mixes</a>
       </li>
       <li>
         <a href="login.php">

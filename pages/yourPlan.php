@@ -68,6 +68,10 @@
     </div>
   </div>
 
+  <?php
+    include_once '../src/Components/footer.php';
+  ?>
+
   <script src="../src/js/yourPlan.js"></script>
   <script src="../src/js/main.js"></script>
 </body>

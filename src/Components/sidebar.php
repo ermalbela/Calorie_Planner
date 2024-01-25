@@ -32,6 +32,9 @@
       <li>
         <a href="suggestedMixes.php" class="bar-item' . ($filename == "suggestedMixes.php" ? " active" : '') . '"><img src="../src/images/thumbs-up.png" class="icon-wrapper" alt="Thumb Up">Suggested Mixes</a>
       </li>
+      <li>
+        <a href="addMixes.php" class="bar-item' . ($filename == "addMixes.php" ? " active" : '') . '"><img src="../src/images/add-mix.png" class="icon-wrapper" alt="Thumb Up">Add Mixes</a>
+      </li>
     </div>
 </div>';
 

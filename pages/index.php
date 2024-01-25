@@ -261,6 +261,10 @@
     </div>
   </div>
 
+  <?php
+    include_once '../src/Components/footer.php';
+  ?>
+
   <script>
     document.querySelector('.toggle').addEventListener('click', () => {
       if(document.querySelector('.main-sidebar').classList.contains('closed-sidebar')){

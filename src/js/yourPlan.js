@@ -11,13 +11,13 @@ const serving = document.querySelector('.serving');
 const dropdownBtn = document.querySelector('.dropDownBtn');
 
 
-const foodNameRe = /^[A-Za-z]{1,15}?[ -]?[A-Za-z]{1,15}?[ -]?[A-Za-z]{1,15}$/;
+const foodNameRe = /^[A-Za-z ]+([A-Za-z]+){0,4}$/;
 const caloriesRe = /^[0-9]{1,3}$/;
 const proteinRe = /^[0-9]{0,3}?\.?\d+g$/;
 const imageRe = /[^\s]+(.*?).(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)$/;
 const servingRe = /^per?[s -][0-9]{1,4}(g|ml)$/;
 
-const clearInputs = (item) => {
+const clearError = (item) => {
   setTimeout(() => {
     item.style.visibility = 'hidden';
   }, 3000);
@@ -28,42 +28,42 @@ addBtn.addEventListener('click', e => {
   if(!foodNameRe.test(foodName.value)){
     e.preventDefault();
     document.querySelector('.foodNameError').style.visibility = 'visible';
-    clearInputs(document.querySelector('.foodNameError'));
+    clearError(document.querySelector('.foodNameError'));
   }
   if(!servingRe.test(serving.value)){
     e.preventDefault();
     document.querySelector('.servingError').style.visibility = 'visible';
-    clearInputs(document.querySelector('.servingError'));
+    clearError(document.querySelector('.servingError'));
   }
   if(!caloriesRe.test(calories.value)){
     e.preventDefault();
     document.querySelector('.caloriesError').style.visibility = 'visible';
-    clearInputs(document.querySelector('.caloriesError'));
+    clearError(document.querySelector('.caloriesError'));
   }
   if(!proteinRe.test(protein.value)){
     e.preventDefault();
     document.querySelector('.proteinError').style.visibility = 'visible';
-    clearInputs(document.querySelector('.proteinError'));
+    clearError(document.querySelector('.proteinError'));
   }
   if(!proteinRe.test(fat.value)){
     e.preventDefault();
     document.querySelector('.fatError').style.visibility = 'visible';
-    clearInputs(document.querySelector('.fatError'));
+    clearError(document.querySelector('.fatError'));
   }
   if(!proteinRe.test(carbs.value)){
     e.preventDefault();
     document.querySelector('.carbsError').style.visibility = 'visible';
-    clearInputs(document.querySelector('.carbsError'));
+    clearError(document.querySelector('.carbsError'));
   }
   if(!imageRe.test(image.value)){
     e.preventDefault();
     document.querySelector('.imageError').style.visibility = 'visible';
-    clearInputs(document.querySelector('.imageError'));
+    clearError(document.querySelector('.imageError'));
   }
   if(dropdownBtn.value == 'Select Category'){
     e.preventDefault();
     document.querySelector('.dropdownError').style.visibility = 'visible';
-    clearInputs(document.querySelector('.dropdownError'));
+    clearError(document.querySelector('.dropdownError'));
   }
 })
 
